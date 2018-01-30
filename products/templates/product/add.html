@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper-outer">
+	<div class="main-block">
+		<h4 class="service-heading">Create New Product</h4>	    
+	</div>
+
+	<div class="wrapper">
+		<form method="post" name="product_form" id="product_form">
+		  {% csrf_token %}
+		  <div class="form-group">
+			{{ form.title.label_tag  }}
+			{{ form.title }}
+			{{ form.errors.title }}
+		  </div>
+		  <div class="form-group">
+		    {{ form.description.label_tag  }}
+			{{ form.description }}
+			{{ form.errors.description }}
+		  </div>
+		  <div class="form-group">
+			{{ form.category.label_tag  }}
+			{{ form.category }}
+			{{ form.errors.category }}
+		  </div>
+		  <button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+
+</div>	
+{% endblock %}

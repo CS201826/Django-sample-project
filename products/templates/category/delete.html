@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="wrapper-outer">	
+	<h4 class="service-heading">Delete Category</h4>	
+
+	<div class="wrapper">
+		<form method="post">{% csrf_token %}
+			<div class="form-group">
+				Are you sure you want to delete "{{ object }}" ?
+			</div>			
+			<input type="submit" value="Submit"  class="btn btn-primary" />
+		</form>
+	</div>
+</div>
+{% endblock %}

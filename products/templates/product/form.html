@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper-outer">
+	<div class="main-block">
+		<div class="left-block">
+		<h4 class="service-heading">Create New Product</h4>
+		</div>
+		<div class="right-block">
+		</div>	
+	</div>
+
+	<div class="wrapper">
+		<form method="post">
+		  {% csrf_token %}
+		  <div class="form-group">
+			<label for="name">Title</label>
+			<input type="text" name="title" class="form-control" maxlength="255" required id="id_title" placeholder="Enter title" />
+		  </div>
+		  <div class="form-group">
+			<label for="name">Description</label>			
+			<textarea name="description" cols="40" rows="3" required id="id_description" class="form-control"></textarea>
+		  </div>
+		  <div class="form-group">
+			<label for="name">Category</label>
+			
+		  </div>
+		  <button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+
+</div>	
+{% endblock %}

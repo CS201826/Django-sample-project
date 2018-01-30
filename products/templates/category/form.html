@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper-outer">
+	<div class="main-block">
+		<div class="left-block">
+		<h4 class="service-heading">Create New Category</h4>
+		</div>
+		<div class="right-block">
+		</div>	
+	</div>
+
+	{{ form.pk }}
+
+	<div class="wrapper">
+		<form method="post">
+		  {% csrf_token %}
+		  <div class="form-group">
+			<label for="name">Name</label>
+			<input type="text" class="form-control" id="id_name"  name="name" placeholder="Enter name" value="{{ form.name.value }}" />
+		  </div>  
+		  
+		  <button type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+
+</div>	
+{% endblock %}

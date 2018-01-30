@@ -1,0 +1,62 @@
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #0c0a17;
+	height: 100px;
+}
+
+#mainNav a {
+	font-size: 20px;
+
+}
+
+#services {
+	padding-top: 55px;
+	padding-bottom: 55px;
+}
+
+.home-page {
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+.wrapper-outer {
+	padding-top: 50px;
+	max-width: 1024px;
+}
+
+.second-col {
+	width : 200px;
+	text-align:center;
+	
+}	
+
+.wrapper {
+	margin-top : 20px;
+	max-width: 400px;
+}
+
+.main-block{
+	display: table;
+	clear:both;
+	width: 100%;
+}
+
+.left-block
+{
+	float: left;
+width: 65%;
+}
+
+.right-block{
+	float: right;
+width: 35%;
+	padding-bottom: 5px;
+	text-align: right;
+}
+
+.errorlist {
+	color: rgb(232, 56, 45);
+	list-style: none;
+	padding: 0;
+}

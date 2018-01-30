@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="wrapper-outer">
+<div class="main-block">
+	<div class="left-block">
+	<h4 class="service-heading">Categories</h4>
+	</div>
+	<div class="right-block">
+	<a href="{% url 'category-create' %}" class="tag-class">Create new category</a>
+	</div>	
+</div>
+
+{% if object_list %}
+<table class="table  table-striped table-hover">
+	<thead>
+		<tr>
+		<th>Name</th>
+		<th class="second-col"></th>
+		</tr>	
+	</thead>
+	<tbody>
+    {% for category in object_list %}
+	<tr>
+    <td>{{ category.name }}  </td>
+    <td class="second-col"><a href="{% url 'category-update' category.id %}">edit</a> | <a href="{% url 'category-delete' category.id %}">delete</a></td>
+    </tr>
+    {% endfor %}
+	</tbody>
+</table>
+{% else %}
+
+<p>No data found</p>
+
+{% endif %}
+</div>
+
+{% endblock %}
